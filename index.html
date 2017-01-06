@@ -1,4 +1,4 @@
-<script src="https://cdn.netpie.io/microgear1.js"></script>
+<script src="https://cdn.netpie.io/microgear.js"></script>
 
 <style>
     body {
@@ -92,234 +92,143 @@
 </style>
 
 <script>
-    const APPKEY_SW1 = "8PEQ1S6HFurPb0e";
-    const APPSECRET_SW1 = "zoR9DpdwhEQknPUhpv28DJjgP";
-    const APPKEY_SW2 = "L2bs7PElUDywkFy";
-    const APPSECRET_SW2 = "TbRbom72uXnKODgKXkCYpVYFH";
-    const APPKEY_SW3 = "AdD1H8U1pwG6KTY";
-    const APPSECRET_SW3 = "9jaeYbSwf56uyM5JlR78o2GVH";
-    const APPKEY_SW4 = "q0dcCW5vUvIHnxm";
-    const APPSECRET_SW4 = "thcYuicjkFAUfDDtYxZRnoEW2";
-    const APPKEY_SW5 = "Kn6DrDVDAFSizgD";
-    const APPSECRET_SW5 = "QboF1t0RlfaJQcsaJPPu34e4M";
-    const APPKEY_SW6 = "qstXTgsnhGktRvU";
-    const APPSECRET_SW6 = "R1svmFVbRGsYEcc1TFKXyuCBk";
-    const APPKEY_SW7 = "cQhEXLIQkQwUEKn";
-    const APPSECRET_SW7 = "QstwICc1AFmJ3dIocHlmS2DTc";
-    const APPKEY_SW8 = "BXhTeIwJEdUtsRg";
-    const APPSECRET_SW8 = "9LhqIo3C4Ne9kx34F1uChMI4V";
+    const APPKEY = "8PEQ1S6HFurPb0e";
+    const APPSECRET = "zoR9DpdwhEQknPUhpv28DJjgP";
     const APPID = "ChaweewanSmartHome";
 
-    var microgear1 = microgear1.create({
-        gearkey: APPKEY_SW1,
-        gearsecret: APPSECRET_SW1
-    });
-    var microgear2 = microgear2.create({
-        gearkey: APPKEY_SW2,
-        gearsecret: APPSECRET_SW2
-    });
-    var microgear3 = microgear3.create({
-        gearkey: APPKEY_SW3,
-        gearsecret: APPSECRET_SW3
-    });
-    var microgear4 = microgear4.create({
-        gearkey: APPKEY_SW4,
-        gearsecret: APPSECRET_SW4
-    });
-    var microgear5 = microgear5.create({
-        gearkey: APPKEY_SW5,
-        gearsecret: APPSECRET_SW5
-    });
-    var microgear6 = microgear6.create({
-        gearkey: APPKEY_SW6,
-        gearsecret: APPSECRET_SW6
-    });
-    var microgear7 = microgear7.create({
-        gearkey: APPKEY_SW7,
-        gearsecret: APPSECRET_SW7
-    });
-    var microgear8 = microgear8.create({
-        gearkey: APPKEY_SW8,
-        gearsecret: APPSECRET_SW8
+    var microgear = microgear.create({
+        gearkey: APPKEY,
+        gearsecret: APPSECRET
     });
     function switchPress1() {
         if (document.getElementById("cube-switch1").className == "cube-switch active") {
-            microgear1.chat("pieplug", "SW1_OFF");
+            microgear.chat("controllerplug", "SW1_OFF");
         } else if (document.getElementById("cube-switch1").className == "cube-switch") {
-            microgear1.chat("pieplug", "SW1_ON");
+            microgear.chat("controllerplug", "SW1_ON");
         }
     }
     function switchPress2() {
         if (document.getElementById("cube-switch2").className == "cube-switch active") {
-            microgear2.chat("pieplug", "SW2_OFF");
+            microgear2.chat("controllerplug", "SW2_OFF");
         } else if (document.getElementById("cube-switch2").className == "cube-switch") {
-            microgear2.chat("pieplug", "SW2_ON");
+            microgear2.chat("controllerplug", "SW2_ON");
         }
     }
     function switchPress3() {
         if (document.getElementById("cube-switch3").className == "cube-switch active") {
-            microgear3.chat("pieplug", "SW3_OFF");
+            microgear3.chat("controllerplug", "SW3_OFF");
         } else if (document.getElementById("cube-switch2").className == "cube-switch") {
-            microgear3.chat("pieplug", "SW3_ON");
+            microgear3.chat("controllerplug", "SW3_ON");
         }
     }
     function switchPress4() {
         if (document.getElementById("cube-switch4").className == "cube-switch active") {
-            microgear4.chat("pieplug", "SW4_OFF");
+            microgear4.chat("controllerplug", "SW4_OFF");
         } else if (document.getElementById("cube-switch4").className == "cube-switch") {
-            microgear4.chat("pieplug", "SW4_ON");
+            microgear4.chat("controllerplug", "SW4_ON");
         }
     }
     function switchPress5() {
         if (document.getElementById("cube-switch5").className == "cube-switch active") {
-            microgear5.chat("pieplug", "SW5_OFF");
+            microgear5.chat("controllerplug", "SW5_OFF");
         } else if (document.getElementById("cube-switch5").className == "cube-switch") {
-            microgear5.chat("pieplug", "SW5_ON");
+            microgear5.chat("controllerplug", "SW5_ON");
         }
     }
     function switchPress6() {
         if (document.getElementById("cube-switch6").className == "cube-switch active") {
-            microgear6.chat("pieplug", "SW6_OFF");
+            microgear6.chat("controllerplug", "SW6_OFF");
         } else if (document.getElementById("cube-switch6").className == "cube-switch") {
-            microgear6.chat("pieplug", "SW6_ON");
+            microgear6.chat("controllerplug", "SW6_ON");
         }
     }
     function switchPress7() {
         if (document.getElementById("cube-switch7").className == "cube-switch active") {
-            microgear7.chat("pieplug", "SW7_OFF");
+            microgear7.chat("controllerplug", "SW7_OFF");
         } else if (document.getElementById("cube-switch7").className == "cube-switch") {
-            microgear7.chat("pieplug", "SW7_ON");
+            microgear7.chat("controllerplug", "SW7_ON");
         }
     }
     function switchPress8() {
         if (document.getElementById("cube-switch8").className == "cube-switch active") {
-            microgear8.chat("pieplug", "SW8_OFF");
+            microgear8.chat("controllerplug", "SW8_OFF");
         } else if (document.getElementById("cube-switch8").className == "cube-switch") {
-            microgear8.chat("pieplug", "SW8_ON");
+            microgear8.chat("controllerplug", "SW8_ON");
         }
     }
-    microgear1.on('message', function(topic, data) {
+    microgear.on('message', function(topic, data) {
         if (data == "SW1_ON") {
             document.getElementById("cube-switch1").className = "cube-switch active";
         } else if (data == "SW1_OFF") {
             document.getElementById("cube-switch1").className = "cube-switch";
-        }
-        
-    });
-     microgear2.on('message', function(topic, data) {   
-         if (data == "SW2_ON") {
+        } 
+
+        else if  if (data == "SW2_ON") {
             document.getElementById("cube-switch2").className = "cube-switch active";
         } else if (data == "SW2_OFF") {
             document.getElementById("cube-switch2").className = "cube-switch";
-        }
-    });
-    microgear3.on('message', function(topic, data) {   
-         if (data == "SW3_ON") {
+        } 
+        
+        else if  if (data == "SW3_ON") {
             document.getElementById("cube-switch3").className = "cube-switch active";
         } else if (data == "SW3_OFF") {
             document.getElementById("cube-switch3").className = "cube-switch";
-        }
-    });
-    microgear4.on('message', function(topic, data) {   
-      
-         if (data == "SW4_ON") {
+        } 
+
+        else if  if (data == "SW4_ON") {
             document.getElementById("cube-switch4").className = "cube-switch active";
         } else if (data == "SW4_OFF") {
             document.getElementById("cube-switch4").className = "cube-switch";
-        }
-    });
-    microgear5.on('message', function(topic, data) {   
-         if (data == "SW5_ON") {
+        } 
+
+        else if  if (data == "SW5_ON") {
             document.getElementById("cube-switch5").className = "cube-switch active";
         } else if (data == "SW5_OFF") {
             document.getElementById("cube-switch5").className = "cube-switch";
-        }
-    });
-    microgear6.on('message', function(topic, data) {   
-       if (data == "SW6_ON") {
+        } 
+
+        else if  if (data == "SW6_ON") {
             document.getElementById("cube-switch6").className = "cube-switch active";
         } else if (data == "SW6_OFF") {
             document.getElementById("cube-switch6").className = "cube-switch";
-        }
-    });
-    microgear7.on('message', function(topic, data) {   
-      if (data == "SW7_ON") {
+        } 
+
+        else if  if (data == "SW7_ON") {
             document.getElementById("cube-switch7").className = "cube-switch active";
         } else if (data == "SW7_OFF") {
             document.getElementById("cube-switch7").className = "cube-switch";
-        }
-    });
-    microgear8.on('message', function(topic, data) {   
-      
-        if (data == "SW8_ON") {
+        } 
+
+        else if  if (data == "SW8_ON") {
             document.getElementById("cube-switch8").className = "cube-switch active";
         } else if (data == "SW8_OFF") {
             document.getElementById("cube-switch8").className = "cube-switch";
-        }
+        } 
+
     });
-    microgear1.on('connected', function() {
-        microgear1.setname('plug1');
+    
+    microgear.on('connected', function() {
+        microgear.setname('ChaweewanSmartHome');
         document.getElementById("cube-switch1").className = "cube-switch active";
         document.getElementById("cube-switch1").style.display = "block";
-    });
-    microgear1.resettoken();
-    microgear1.connect(APPID);
-
-    microgear2.on('connected', function() {
-        microgear2.setname('plug2');
         document.getElementById("cube-switch2").className = "cube-switch active";
         document.getElementById("cube-switch2").style.display = "block";
-    });
-    microgear2.resettoken();
-    microgear2.connect(APPID);
-
-    microgear3.on('connected', function() {
-        microgear3.setname('plug3');
         document.getElementById("cube-switch3").className = "cube-switch active";
         document.getElementById("cube-switch3").style.display = "block";
-    });
-    microgear3.resettoken();
-    microgear3.connect(APPID);
-
-    microgear4.on('connected', function() {
-        microgear4.setname('plug1');
         document.getElementById("cube-switch4").className = "cube-switch active";
         document.getElementById("cube-switch4").style.display = "block";
-    });
-    microgear4.resettoken();
-    microgear4.connect(APPID);
-
-    microgear5.on('connected', function() {
-        microgear1.setname('plug5');
         document.getElementById("cube-switch5").className = "cube-switch active";
         document.getElementById("cube-switch5").style.display = "block";
-    });
-    microgear5.resettoken();
-    microgear5.connect(APPID);
-
-    microgear6.on('connected', function() {
-        microgear6.setname('plug6');
         document.getElementById("cube-switch6").className = "cube-switch active";
         document.getElementById("cube-switch6").style.display = "block";
-    });
-    microgear6.resettoken();
-    microgear6.connect(APPID);
-
-    microgear7.on('connected', function() {
-        microgear7.setname('plug7');
         document.getElementById("cube-switch7").className = "cube-switch active";
         document.getElementById("cube-switch7").style.display = "block";
-    });
-    microgear7.resettoken();
-    microgear7.connect(APPID);
-
-    microgear8.on('connected', function() {
-        microgear8.setname('plug8');
         document.getElementById("cube-switch8").className = "cube-switch active";
         document.getElementById("cube-switch8").style.display = "block";
     });
-    microgear8.resettoken();
-    microgear8.connect(APPID); 
+    microgear.resettoken();
+    microgear.connect(APPID);
+
 
     
 </script>

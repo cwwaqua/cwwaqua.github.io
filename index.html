@@ -1,4 +1,4 @@
-<script src="https://cdn.netpie.io/microgear.js"></script>
+<script src="https://cdn.netpie.io/microgear1.js"></script>
 
 <style>
     body {
@@ -92,46 +92,286 @@
 </style>
 
 <script>
-    const APPKEY = "8PEQ1S6HFurPb0e";
-    const APPSECRET = "zoR9DpdwhEQknPUhpv28DJjgP";
+    const APPKEY_SW1 = "8PEQ1S6HFurPb0e";
+    const APPSECRET_SW1 = "zoR9DpdwhEQknPUhpv28DJjgP";
+    const APPKEY_SW2 = "L2bs7PElUDywkFy";
+    const APPSECRET_SW2 = "TbRbom72uXnKODgKXkCYpVYFH";
+    const APPKEY_SW3 = "AdD1H8U1pwG6KTY";
+    const APPSECRET_SW3 = "9jaeYbSwf56uyM5JlR78o2GVH";
+    const APPKEY_SW4 = "q0dcCW5vUvIHnxm";
+    const APPSECRET_SW4 = "thcYuicjkFAUfDDtYxZRnoEW2";
+    const APPKEY_SW5 = "Kn6DrDVDAFSizgD";
+    const APPSECRET_SW5 = "QboF1t0RlfaJQcsaJPPu34e4M";
+    const APPKEY_SW6 = "qstXTgsnhGktRvU";
+    const APPSECRET_SW6 = "R1svmFVbRGsYEcc1TFKXyuCBk";
+    const APPKEY_SW7 = "cQhEXLIQkQwUEKn";
+    const APPSECRET_SW7 = "QstwICc1AFmJ3dIocHlmS2DTc";
+    const APPKEY_SW8 = "BXhTeIwJEdUtsRg";
+    const APPSECRET_SW8 = "9LhqIo3C4Ne9kx34F1uChMI4V";
     const APPID = "ChaweewanSmartHome";
 
-    var microgear = Microgear.create({
-        gearkey: APPKEY,
-        gearsecret: APPSECRET
+    var microgear1 = microgear1.create({
+        gearkey: APPKEY_SW1,
+        gearsecret: APPSECRET_SW1
     });
-
-    function switchPress() {
-        if (document.getElementById("cube-switch").className == "cube-switch active") {
-            microgear.chat("pieplug", "OFF");
-        } else if (document.getElementById("cube-switch").className == "cube-switch") {
-            microgear.chat("pieplug", "ON");
+    var microgear2 = microgear2.create({
+        gearkey: APPKEY_SW2,
+        gearsecret: APPSECRET_SW2
+    });
+    var microgear3 = microgear3.create({
+        gearkey: APPKEY_SW3,
+        gearsecret: APPSECRET_SW3
+    });
+    var microgear4 = microgear4.create({
+        gearkey: APPKEY_SW4,
+        gearsecret: APPSECRET_SW4
+    });
+    var microgear5 = microgear5.create({
+        gearkey: APPKEY_SW5,
+        gearsecret: APPSECRET_SW5
+    });
+    var microgear6 = microgear6.create({
+        gearkey: APPKEY_SW6,
+        gearsecret: APPSECRET_SW6
+    });
+    var microgear7 = microgear7.create({
+        gearkey: APPKEY_SW7,
+        gearsecret: APPSECRET_SW7
+    });
+    var microgear8 = microgear8.create({
+        gearkey: APPKEY_SW8,
+        gearsecret: APPSECRET_SW8
+    });
+    function switchPress1() {
+        if (document.getElementById("cube-switch1").className == "cube-switch active") {
+            microgear1.chat("pieplug", "SW1_OFF");
+        } else if (document.getElementById("cube-switch1").className == "cube-switch") {
+            microgear1.chat("pieplug", "SW1_ON");
         }
     }
-
-    microgear.on('message', function(topic, data) {
-        if (data == "ON") {
-            document.getElementById("cube-switch").className = "cube-switch active";
-        } else if (data == "OFF") {
-            document.getElementById("cube-switch").className = "cube-switch";
+    function switchPress2() {
+        if (document.getElementById("cube-switch2").className == "cube-switch active") {
+            microgear2.chat("pieplug", "SW2_OFF");
+        } else if (document.getElementById("cube-switch2").className == "cube-switch") {
+            microgear2.chat("pieplug", "SW2_ON");
+        }
+    }
+    function switchPress3() {
+        if (document.getElementById("cube-switch3").className == "cube-switch active") {
+            microgear3.chat("pieplug", "SW3_OFF");
+        } else if (document.getElementById("cube-switch2").className == "cube-switch") {
+            microgear3.chat("pieplug", "SW3_ON");
+        }
+    }
+    function switchPress4() {
+        if (document.getElementById("cube-switch4").className == "cube-switch active") {
+            microgear4.chat("pieplug", "SW4_OFF");
+        } else if (document.getElementById("cube-switch4").className == "cube-switch") {
+            microgear4.chat("pieplug", "SW4_ON");
+        }
+    }
+    function switchPress5() {
+        if (document.getElementById("cube-switch5").className == "cube-switch active") {
+            microgear5.chat("pieplug", "SW5_OFF");
+        } else if (document.getElementById("cube-switch5").className == "cube-switch") {
+            microgear5.chat("pieplug", "SW5_ON");
+        }
+    }
+    function switchPress6() {
+        if (document.getElementById("cube-switch6").className == "cube-switch active") {
+            microgear6.chat("pieplug", "SW6_OFF");
+        } else if (document.getElementById("cube-switch6").className == "cube-switch") {
+            microgear6.chat("pieplug", "SW6_ON");
+        }
+    }
+    function switchPress7() {
+        if (document.getElementById("cube-switch7").className == "cube-switch active") {
+            microgear7.chat("pieplug", "SW7_OFF");
+        } else if (document.getElementById("cube-switch7").className == "cube-switch") {
+            microgear7.chat("pieplug", "SW7_ON");
+        }
+    }
+    function switchPress8() {
+        if (document.getElementById("cube-switch8").className == "cube-switch active") {
+            microgear8.chat("pieplug", "SW8_OFF");
+        } else if (document.getElementById("cube-switch8").className == "cube-switch") {
+            microgear8.chat("pieplug", "SW8_ON");
+        }
+    }
+    microgear1.on('message', function(topic, data) {
+        if (data == "SW1_ON") {
+            document.getElementById("cube-switch1").className = "cube-switch active";
+        } else if (data == "SW1_OFF") {
+            document.getElementById("cube-switch1").className = "cube-switch";
+        }
+        
+    });
+     microgear2.on('message', function(topic, data) {   
+         if (data == "SW2_ON") {
+            document.getElementById("cube-switch2").className = "cube-switch active";
+        } else if (data == "SW2_OFF") {
+            document.getElementById("cube-switch2").className = "cube-switch";
         }
     });
-
-    microgear.on('connected', function() {
-        microgear.setname('controllerplug');
-        document.getElementById("cube-switch").className = "cube-switch active";
-        document.getElementById("cube-switch").style.display = "block";
+    microgear3.on('message', function(topic, data) {   
+         if (data == "SW3_ON") {
+            document.getElementById("cube-switch3").className = "cube-switch active";
+        } else if (data == "SW3_OFF") {
+            document.getElementById("cube-switch3").className = "cube-switch";
+        }
     });
-    microgear.resettoken();
-    microgear.connect(APPID);
+    microgear4.on('message', function(topic, data) {   
+      
+         if (data == "SW4_ON") {
+            document.getElementById("cube-switch4").className = "cube-switch active";
+        } else if (data == "SW4_OFF") {
+            document.getElementById("cube-switch4").className = "cube-switch";
+        }
+    });
+    microgear5.on('message', function(topic, data) {   
+         if (data == "SW5_ON") {
+            document.getElementById("cube-switch5").className = "cube-switch active";
+        } else if (data == "SW5_OFF") {
+            document.getElementById("cube-switch5").className = "cube-switch";
+        }
+    });
+    microgear6.on('message', function(topic, data) {   
+       if (data == "SW6_ON") {
+            document.getElementById("cube-switch6").className = "cube-switch active";
+        } else if (data == "SW6_OFF") {
+            document.getElementById("cube-switch6").className = "cube-switch";
+        }
+    });
+    microgear7.on('message', function(topic, data) {   
+      if (data == "SW7_ON") {
+            document.getElementById("cube-switch7").className = "cube-switch active";
+        } else if (data == "SW7_OFF") {
+            document.getElementById("cube-switch7").className = "cube-switch";
+        }
+    });
+    microgear8.on('message', function(topic, data) {   
+      
+        if (data == "SW8_ON") {
+            document.getElementById("cube-switch8").className = "cube-switch active";
+        } else if (data == "SW8_OFF") {
+            document.getElementById("cube-switch8").className = "cube-switch";
+        }
+    });
+    microgear1.on('connected', function() {
+        microgear1.setname('plug1');
+        document.getElementById("cube-switch1").className = "cube-switch active";
+        document.getElementById("cube-switch1").style.display = "block";
+    });
+    microgear1.resettoken();
+    microgear1.connect(APPID);
+
+    microgear2.on('connected', function() {
+        microgear2.setname('plug2');
+        document.getElementById("cube-switch2").className = "cube-switch active";
+        document.getElementById("cube-switch2").style.display = "block";
+    });
+    microgear2.resettoken();
+    microgear2.connect(APPID);
+
+    microgear3.on('connected', function() {
+        microgear3.setname('plug3');
+        document.getElementById("cube-switch3").className = "cube-switch active";
+        document.getElementById("cube-switch3").style.display = "block";
+    });
+    microgear3.resettoken();
+    microgear3.connect(APPID);
+
+    microgear4.on('connected', function() {
+        microgear4.setname('plug1');
+        document.getElementById("cube-switch4").className = "cube-switch active";
+        document.getElementById("cube-switch4").style.display = "block";
+    });
+    microgear4.resettoken();
+    microgear4.connect(APPID);
+
+    microgear5.on('connected', function() {
+        microgear1.setname('plug5');
+        document.getElementById("cube-switch5").className = "cube-switch active";
+        document.getElementById("cube-switch5").style.display = "block";
+    });
+    microgear5.resettoken();
+    microgear5.connect(APPID);
+
+    microgear6.on('connected', function() {
+        microgear6.setname('plug6');
+        document.getElementById("cube-switch6").className = "cube-switch active";
+        document.getElementById("cube-switch6").style.display = "block";
+    });
+    microgear6.resettoken();
+    microgear6.connect(APPID);
+
+    microgear7.on('connected', function() {
+        microgear7.setname('plug7');
+        document.getElementById("cube-switch7").className = "cube-switch active";
+        document.getElementById("cube-switch7").style.display = "block";
+    });
+    microgear7.resettoken();
+    microgear7.connect(APPID);
+
+    microgear8.on('connected', function() {
+        microgear8.setname('plug8');
+        document.getElementById("cube-switch8").className = "cube-switch active";
+        document.getElementById("cube-switch8").style.display = "block";
+    });
+    microgear8.resettoken();
+    microgear8.connect(APPID); 
+
+    
 </script>
 <div style="margin: 20px;"><img src="img/oe.png" style="vertical-align:bottom;width:150px;hight:35px;">
 </div>
 <center>
-    <div href="" class="cube-switch" id="cube-switch" onclick="switchPress()">
+    <div href="" class="cube-switch" id="cube-switch1" onclick="switchPress1()">
         <span class="switch">
-			<span class="switch-state off">Off</span>
-        <span class="switch-state on">On</span>
+		    <span class="switch-state off">ปิด</span>
+            <span class="switch-state on">เปิด</span>
+        </span>
+    </div>
+    <div href="" class="cube-switch" id="cube-switch2" onclick="switchPress2()">
+        <span class="switch">
+            <span class="switch-state off">ปิด</span>
+            <span class="switch-state on">เปิด</span>
+        </span>
+    </div>
+    <div href="" class="cube-switch" id="cube-switch3" onclick="switchPress3()">
+        <span class="switch">
+            <span class="switch-state off">ปิด</span>
+            <span class="switch-state on">เปิด</span>
+        </span>
+    </div>
+    <div href="" class="cube-switch" id="cube-switch4" onclick="switchPress4()">
+        <span class="switch">
+            <span class="switch-state off">ปิด</span>
+            <span class="switch-state on">เปิด</span>
+        </span>
+    </div>
+    <div href="" class="cube-switch" id="cube-switch5" onclick="switchPress5()">
+        <span class="switch">
+            <span class="switch-state off">ปิด</span>
+            <span class="switch-state on">เปิด</span>
+        </span>
+    </div>
+    <div href="" class="cube-switch" id="cube-switch6" onclick="switchPress6()">
+        <span class="switch">
+            <span class="switch-state off">ปิด</span>
+            <span class="switch-state on">เปิด</span>
+        </span>
+    </div>
+    <div href="" class="cube-switch" id="cube-switch7" onclick="switchPress7()">
+        <span class="switch">
+            <span class="switch-state off">ปิด</span>
+            <span class="switch-state on">เปิด</span>
+        </span>
+    </div>
+    <div href="" class="cube-switch" id="cube-switch8" onclick="switchPress8()">
+        <span class="switch">
+            <span class="switch-state off">ปิด</span>
+            <span class="switch-state on">เปิด</span>
         </span>
     </div>
 </center>

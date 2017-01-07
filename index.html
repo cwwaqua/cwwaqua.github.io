@@ -202,26 +202,74 @@ function switchPress2() {
             document.getElementById("cube-switch8").className = "cube-switch active";
         } else if (data == "SW8_OFF") {
             document.getElementById("cube-switch8").className = "cube-switch";
-        } 
+        } else{
+            var arrayData = data.split(',');
+            if (arrayData[0] == "1") {
+            document.getElementById("cube-switch").className = "cube-switch active";
+            } else{
+            document.getElementById("cube-switch").className = "cube-switch";
+            }
+
+            if (arrayData[1] == "1") {
+            document.getElementById("cube-switch2").className = "cube-switch active";
+            } else{
+            document.getElementById("cube-switch2").className = "cube-switch";
+            } 
+            if  (arrayData[2] == "1") {
+            document.getElementById("cube-switch3").className = "cube-switch active";
+            } else{
+            document.getElementById("cube-switch3").className = "cube-switch";
+            } 
+
+            if  (arrayData[3] == "1") {
+            document.getElementById("cube-switch4").className = "cube-switch active";
+            } else {
+            document.getElementById("cube-switch4").className = "cube-switch";
+            } 
+
+             if   (arrayData[4] == "1") {
+            document.getElementById("cube-switch5").className = "cube-switch active";
+            } else {
+            document.getElementById("cube-switch5").className = "cube-switch";
+            } 
+
+            if   (arrayData[5] == "1") {
+            document.getElementById("cube-switch6").className = "cube-switch active";
+            } else  {
+            document.getElementById("cube-switch6").className = "cube-switch";
+            } 
+
+            if   (arrayData[6] == "1") {
+            document.getElementById("cube-switch7").className = "cube-switch active";
+            } else {
+            document.getElementById("cube-switch7").className = "cube-switch";
+            } 
+            if   (arrayData[7] == "1") {
+            document.getElementById("cube-switch8").className = "cube-switch active";
+            } else {
+            document.getElementById("cube-switch8").className = "cube-switch";
+            }
+        }
     });
 
     microgear.on('connected', function() {
         microgear.setname('controllerplugServer');
-        document.getElementById("cube-switch").className = "cube-switch active";
+        microgear.chat("controllerplug", "CheckState");
+        document.getElementById("cube-switch").className = "cube-switch";
         document.getElementById("cube-switch").style.display = "block";
-        document.getElementById("cube-switch2").className = "cube-switch active";
+        document.getElementById("cube-switch2").className = "cube-switch";
         document.getElementById("cube-switch2").style.display = "block";
-        document.getElementById("cube-switch3").className = "cube-switch active";
+        document.getElementById("cube-switch3").className = "cube-switch";
         document.getElementById("cube-switch3").style.display = "block";
-        document.getElementById("cube-switch4").className = "cube-switch active";
+        document.getElementById("cube-switch4").className = "cube-switch";
         document.getElementById("cube-switch4").style.display = "block";
-        document.getElementById("cube-switch5").className = "cube-switch active";
+        document.getElementById("cube-switch5").className = "cube-switch";
         document.getElementById("cube-switch5").style.display = "block";
-        document.getElementById("cube-switch6").className = "cube-switch active";
+        document.getElementById("cube-switch6").className = "cube-switch";
         document.getElementById("cube-switch6").style.display = "block";
-        document.getElementById("cube-switch7").className = "cube-switch active";
+        document.getElementById("cube-switch7").className = "cube-switch";
         document.getElementById("cube-switch7").style.display = "block";
-        document.getElementById("cube-switch8").className = "cube-switch active";
+        document.getElementById("cube-switch8").className = "cube-switch";
         document.getElementById("cube-switch8").style.display = "block";
     });
     microgear.resettoken();
